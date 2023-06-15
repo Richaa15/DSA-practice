@@ -40,7 +40,7 @@ public class LinkedList {  //LinkedList class represent the linked list
         }  
         System.out.println();  
     }  
-    
+    //Insert at Beginning
     public void insertAtBeginning(int data){
         Node newNode = new Node(data);
         newNode.next = head;
@@ -80,6 +80,20 @@ public class LinkedList {  //LinkedList class represent the linked list
         
     }
     
+     public void deleteStart() {
+        Node temp = head;
+        head = temp.next;
+    }
+
+    public void deleteEnd() {
+        Node temp = head;
+        while (temp.next.next != null) {
+            temp = temp.next;
+        }
+        temp.next = null;
+    }
+
+    
     public static void main(String[] args) {  
           
         LinkedList lList = new LinkedList();  
@@ -102,6 +116,14 @@ public class LinkedList {  //LinkedList class represent the linked list
         lList.display();
         
         lList.insertAtAPosition(26, 3);
+        
+        lList.display();
+        
+        lList.deleteStart();
+        
+        lList.display();
+        
+        lList.deleteEnd();
         
         lList.display();
         

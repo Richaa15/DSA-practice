@@ -32,7 +32,7 @@ class LinkedList {
         }
     }
 
-    public int getCount() {
+    public int getCount() {           //To get the count of linked list.
         int c = 0;
         Node temp = head;
         while (temp != null) {
@@ -40,6 +40,22 @@ class LinkedList {
             temp = temp.next;
         }
         return c;
+    }
+    
+    public int getMinimum() {          //To get minimum element of linked list.
+        if (isEmpty()) {
+            System.out.println("List is empty");
+        }
+
+        int min = head.value;
+        Node temp = head.next;
+        while (temp != null) {
+            if (temp.value < min) {
+                min = temp.value;
+            }
+            temp = temp.next;
+        }
+        return min;
     }
 
     public static void main(String[] args) {
@@ -49,6 +65,8 @@ class LinkedList {
         l.insert(20);
         l.insert(30);
 
-        System.out.println("Count of list: " + list.getCount()); 
+        System.out.println("Count of list: " + l.getCount()); 
+        
+        System.out.println("Minimum element oflist is: " + l.getMinimum());
     }
 }

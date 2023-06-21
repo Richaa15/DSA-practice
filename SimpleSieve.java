@@ -35,3 +35,11 @@ public static void main(String[] args) {
         }
     }
 }
+
+/*
+To print prime pairs with a difference of 6
+public static void printPrimeNumbers(boolean[] s, int lR, int uR) {
+        for (int num = lR; num <= uR - 6; num++) {
+            if (s[num] && s[num + 6]) {
+                System.out.println(num + " and " + (num + 6));
+*/
